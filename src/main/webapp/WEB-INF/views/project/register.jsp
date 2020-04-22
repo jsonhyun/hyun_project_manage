@@ -7,6 +7,32 @@
 		$("#cancel").click(function () {
 			location.href="${pageContext.request.contextPath}/project/list";
 		})
+		
+		$("form").submit(function () {
+			var pName = $("input[name='pName']").val();
+			if(pName == ""){
+				alert("프로젝트 이름을 입력하세요.");
+				return false;
+			}
+			
+			var pContent = $("input[name='pContent']").val();
+			if(pContent == ""){
+				alert("프로젝트 내용을 입력하세요.");
+				return false;
+			}
+			
+			var pStart = $("input[name='pStart']").val();
+			if(pStart == ""){
+				alert("시작날짜를 입력하세요.");
+				return false;
+			}
+			
+			var pEnd = $("input[name='pEnd']").val();
+			if(pEnd == ""){
+				alert("종료날짜를 입력하세요.");
+				return false;
+			}
+		})
 	})
 </script>
 <div class="content">
