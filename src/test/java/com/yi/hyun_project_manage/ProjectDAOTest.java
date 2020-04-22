@@ -3,6 +3,7 @@ package com.yi.hyun_project_manage;
 import java.util.Date;
 
 import org.junit.FixMethodOrder;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,12 +21,12 @@ public class ProjectDAOTest {
 	@Autowired
 	private ProjectDAO dao;
 	
-//	@Test
+	@Test
 	public void test01DAO() {
 		System.out.println(dao);
 	}
 	
-//	@Test
+	@Test
 	public void test02Insert() throws Exception {
 		ProjectVO vo = new ProjectVO();
 		vo.setpName("test");
@@ -36,17 +37,17 @@ public class ProjectDAOTest {
 		dao.insert(vo);
 	}
 	
-//	@Test
+	@Test
 	public void test03ReadByNo() throws Exception {
 		dao.readByNo(1);
 	}
 	
-//	@Test
+	@Test
 	public void test04List() throws Exception {
 		dao.list();
 	}
 	
-//	@Test
+	@Test
 	public void test05Update() throws Exception {
 		ProjectVO vo = new ProjectVO();
 		vo.setpName("user00");
@@ -58,7 +59,7 @@ public class ProjectDAOTest {
 		dao.update(vo);
 	}
 	
-//	@Test
+	@Test
 	public void test06Delete() throws Exception {
 		dao.delete(1);
 	}

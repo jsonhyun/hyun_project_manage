@@ -28,7 +28,7 @@
 		<div class="col-sm-12">
 			<div class="box box-primary">
 				<div class="box-header">
-					<h3 class="box-title">프로젝트 리스트</h3>
+					<h3 class="box-title">프로젝트 세부내용</h3>
 				</div>
 				<div class="box-body">
 					<table class="table table-bordered">
