@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.ProjectMapper">
+	<insert id="insert" parameterType="ProjectVO">
+		insert into project (pName, pContent, pStart, pEnd, pStatus)
+		values(#{pName}, #{pContent}, #{pStart}, #{pEnd}, #{pStatus})
+	</insert>
+	
+	<select id="readByNo" resultType="ProjectVO">
+		select * from project where pNo = #{pNo}
+	</select>
+	
+	<select id="list" resultType="ProjectVO">
+		select * from project order by pNo desc
+	</select>
+	
+	<update id="update" parameterType="ProjectVO">
+		update project set pName=#{pName}, pContent=#{pContent}, pStart=#{pStart}, pEnd=#{pEnd}, pStatus=#{pStatus}
+		where pNo = #{pNo}
+	</update>
+	
+	<delete id="delete" parameterType="ProjectVO">
+		delete from project where pNo = #{pNo}
+	</delete>
+</mapper>
